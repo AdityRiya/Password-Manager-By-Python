@@ -10,7 +10,10 @@ def write_key():
 write_key()'''
 
 def load_key():
-    
+    file = open("key.key","rb")
+    key = file.read()
+    file.close()
+    return key
 def view():
     with open('password.txt','r') as f:
          for line in f.readlines():
